@@ -20,6 +20,7 @@ struct Landmark : Hashable, Codable, Identifiable {
 //    -> Image Name is not Jason. Therefore, transfer "name" to "imageName"
     
     var imageName : String
+    
     var image : Image {
         Image(imageName)
     }
