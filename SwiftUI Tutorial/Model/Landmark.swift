@@ -16,13 +16,13 @@ struct Landmark : Hashable, Codable, Identifiable {
     var park : String
     var state : String
     var description : String
-    var imageName : String
+//    var imageName : String
 //    -> Image Name is not Jason. Therefore, transfer "name" to "imageName"
     
-//    private var imageName : String
-//    var image : Image {
-//        Image(imageName)
-//    }
+    var imageName : String
+    var image : Image {
+        Image(imageName)
+    }
 
     struct Coordinates : Hashable, Codable {
         var latitude : Double
