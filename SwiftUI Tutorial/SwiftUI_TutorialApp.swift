@@ -9,9 +9,12 @@ import SwiftUI
 
 @main // @main -> identifies the app's entry point
 struct SwiftUI_TutorialApp: App {
+    @StateObject private var modelData = ModelData()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(modelData)
         }
     }
 }
