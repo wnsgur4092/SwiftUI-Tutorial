@@ -22,7 +22,16 @@ struct Landmark : Hashable, Codable, Identifiable {
         Image(imageName)
     }
     
-    var isFavorite : Bool 
+    var isFavorite : Bool
+    
+    var category : Category
+    enum Category : String, CaseIterable, Codable{
+        case lakes = "Lakes"
+        case rivers = "Rivers"
+        case mountains = "Mountains"
+    }
+    
+    var isFeatured : Bool
 
     struct Coordinates : Hashable, Codable {
         var latitude : Double
